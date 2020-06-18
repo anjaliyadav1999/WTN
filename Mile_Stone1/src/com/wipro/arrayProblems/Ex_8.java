@@ -4,27 +4,36 @@ public class Ex_8 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int a[]=new int[100];
-		for(int i=0;i<args.length;i++)
+		int l=args.length;
+		int a[]=new int[l];
+		int index1=-1,index2=-1,sum=0;
+		for(int i=0;i<l;i++)
 		{
 			a[i]=Integer.parseInt(args[i]);
-		}
-		int sum=0,sum1=0;
-		for(int i=0;i<args.length-1;i++)
-		{
 			if(a[i]==6)
-			{
-				for(int j=args.length-1;j>=0;j--)
-				{
-					if(a[j]==7)
-						break;
-					sum1=sum1+a[j];
-				}
-				break;
-			}
-			sum=sum+a[i];
+				index1=i;
+			if(a[i]==7)
+				index2=i;
 		}
-		System.out.println(sum1+sum);
+		if(index1==-1||index2==-1||index1>index2)
+		{
+			for(int i=0;i<l;i++)
+			{
+				sum+=a[i];
+			}
+		}
+		else
+		{
+			for(int i=0;i<index1;i++)
+			{
+				sum+=a[i];
+			}
+			for(int i=index2+1;i<l;i++)
+			{
+				sum+=a[i];
+			}
+		}
+		System.out.println("Sum: "+sum);
 	}
 
 }
