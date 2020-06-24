@@ -16,7 +16,6 @@ class Fruit
 }
 class Apple extends Fruit
 {
-
 	Apple()
 	{
 		name="Apple";
@@ -32,7 +31,6 @@ class Apple extends Fruit
 }
 class Orange extends Fruit
 {
-
 	Orange()
 	{
 		name="Orange";
